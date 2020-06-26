@@ -1,4 +1,6 @@
 const fetch = require("node-fetch");
+const dotenv = require('dotenv');
+dotenv.config();
 
 function handleSubmit(event) {
     event.preventDefault()
@@ -23,7 +25,7 @@ function handleSubmit(event) {
       // let getData = await getNlpData('http://localhost:8081/nlpapi', urldata);
       // console.log('getData', getData);
       // await updateUI(getData);
-      postnlpdata('http://localhost:8081/nlpapi/extract', urldata)
+      postnlpdata(`http://localhost:${process.env.PORT}/nlpapi/extract`, urldata)
       .then(function(data){
         console.log('inside then');
         // let strLabel = data[0]['label']
