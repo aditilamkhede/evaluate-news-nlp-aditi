@@ -13,7 +13,7 @@ const cors = require('cors')  // import cors
 const app = express() // your express app instance
 app.use(cors()) // Use it as the middleware
 
-app.use(express.static('dist'))
+app.use(express.static('dist'));
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
