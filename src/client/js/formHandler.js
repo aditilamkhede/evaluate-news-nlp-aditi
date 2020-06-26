@@ -30,7 +30,7 @@ function handleSubmit(event) {
       // let getData = await getNlpData('http://localhost:8081/nlpapi', urldata);
       // console.log('getData', getData);
       // await updateUI(getData);
-      postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
+      postnlpdata(`http://https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
       // postnlpdata(`http://localhost:8081/nlpapi/extract`, urldata)
       .then(function(data){
         console.log('inside then');
