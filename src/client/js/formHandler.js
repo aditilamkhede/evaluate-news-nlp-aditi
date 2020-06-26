@@ -3,7 +3,12 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 function handleSubmit(event) {
+
+    console.log('Button clicked');
+    
     event.preventDefault()
+
+    console.log('Button clicked after');
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
