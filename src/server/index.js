@@ -130,8 +130,9 @@ app.post('/nlpapi', function (req, res) {
 })
 
 app.post('/nlpapi/extract', function (req, res) {
-    // console.log('Post extract', req.body);
+    console.log('Post extract', req.body);
     projectData['nlpurl'] = req.body.nlpurl;
+    console.log('Post extract', req.body.nlpurl);
 
     nplapi.extract({
       url: projectData['nlpurl'],
