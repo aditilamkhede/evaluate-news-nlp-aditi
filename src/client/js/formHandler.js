@@ -31,9 +31,13 @@ function handleSubmit(event) {
       // console.log('getData', getData);
       // await updateUI(getData);
 
-      postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
+      // Change url in postnldata as per below description for heroku and local env
+      // heroku url --> https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract
+      // local url --> http://localhost:5000/nlpapi/extract
+
       // postnlpdata(`http://localhost:8081/nlpapi/extract`, urldata)
-      // postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
+      // postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
+      postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
       .then(function(data){
         console.log('inside then on 5000');
         // let strLabel = data[0]['label']
