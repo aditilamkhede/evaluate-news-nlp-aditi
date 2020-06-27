@@ -30,10 +30,12 @@ function handleSubmit(event) {
       // let getData = await getNlpData('http://localhost:8081/nlpapi', urldata);
       // console.log('getData', getData);
       // await updateUI(getData);
-      postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
+
+      // postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
       // postnlpdata(`http://localhost:8081/nlpapi/extract`, urldata)
+      postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
       .then(function(data){
-        console.log('inside then');
+        console.log('inside then on 5000');
         // let strLabel = data[0]['label']
         // console.log('In Response Data Label - ', strLabel);
         console.log('post response Data - ', data);
@@ -99,7 +101,7 @@ const postnlpdata = async(url='', data={}) => {
 
   try {
     const newData = await res.json();
-    console.log("In post data", newData);
+    // console.log("In post data", newData);
     return newData;
   } catch (err) {
     console.log('Error in postnlpdata', err);

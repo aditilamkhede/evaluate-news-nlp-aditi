@@ -139,7 +139,7 @@ app.post('/nlpapi/extract', function (req, res) {
       best_image: true
     }, function(error, response) {
       if (error === null) {
-        console.log(response);
+        // console.log(response);
         projectData['image'] = response['image'];
         projectData['author'] = response['author'];
         projectData['title'] = response['title'];

@@ -7,7 +7,7 @@ const nlpapi = require('../src/client/js/formHandler');
 // import * as nlpapi from '../src/client/js/formHandler';
 console.log(nlpapi);
 
-const url = 'http://localhost:8081/nlpapi/extract';
+const url = 'http://localhost:5000/nlpapi/extract';
 const urldata = {nlpurl: 'http://techcrunch.com/2015/07/16/microsoft-will-never-give-up-on-mobile'};
 
 test('validates url', () => {
