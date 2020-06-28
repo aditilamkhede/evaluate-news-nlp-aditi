@@ -34,7 +34,7 @@ section {
     grid-template-rows: 20vh 70vh 10vh;
     grid-template-areas: "hd hd hd hd hd"
     "main main main main main"
-    "ft ft ft ft ft ft";
+    "ft ft ft ft ft";
     justify-content: center;
 }
 
@@ -78,16 +78,15 @@ section {
 // }
 .footer {
   grid-area: ft;
-}
-
-.navItem {
-  width: 80px;
-}
-.logo {
-  flex: 1;
-  color: #8A2BE2;/*white;*/
-  font-size: 20px;
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: white;/*#8A2BE2;/*#455388;*/
+  /*border-radius: 1rem;*/
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: solid 1px #8A2BE2;
 }
 .clsResult {
   display: flex;
@@ -98,6 +97,13 @@ section {
     font-weight: bold;
     padding: 10px 0 5px 0;
   }
+}
+.clsImage {
+  width: 400px;
+  height: 200px;
+}
+.img {
+  object-fit: contain;
 }
 .clsHide {
   visibility: hidden;

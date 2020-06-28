@@ -2,4 +2,16 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
+    justify-content: space-around;
+}
+.navItem {
+  width: 80px;
+}
+.logo {
+  flex: 1;
+  // color: #000000;/*#8A2BE2;*/
+  font-size: 25px;
+  margin-left: 1rem;
+  text-align: center;
+  font-weight: bold;
 }
