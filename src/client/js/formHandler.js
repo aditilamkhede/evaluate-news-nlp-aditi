@@ -51,8 +51,8 @@ function handleSubmit(event) {
       // local url --> http://localhost:5000/nlpapi/extract
 
       // postnlpdata(`http://localhost:8081/nlpapi/extract`, urldata)
-      // postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
-      postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
+      postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
+      // postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
       .then(function(data){
         console.log('inside then on 5000');
         // let strLabel = data[0]['label']
