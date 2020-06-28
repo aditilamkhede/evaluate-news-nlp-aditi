@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Test NLP</title>
         <!-- <link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
         <link rel="stylesheet" href="/styles/header.css">
@@ -11,17 +11,17 @@
     </head>
 
     <body>
-
-        <header>
-            <div class="">
-                Logo
+      <div class="container">
+        <header class="header">
+            <div class="logo">
+              <h1>Evaluate Natural Language Processing</h1>
             </div>
-            <div class="">
-                navigation
+            <div class="navItem">
+                <a href="index.html"><h3>Home</h3></a>
             </div>
         </header>
 
-        <main>
+        <main class="main">
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
@@ -29,17 +29,17 @@
                 </form>
             <section>
 
-            <section>
-              <div class="">
+            <section id="secResults">
+              <div class="secHead">
                 <h3>Form Results</h3>
               </div>
-
+              <div id="dvResult" class="clsResult clsHide">
                 <div id="title">
-                  <p><strong>Title </strong></p>
+                  <p><strong>Title: </strong></p>
                   <p></p>
                 </div>
                 <div id="author">
-                  <p><strong>Author </strong></p>
+                  <p><strong>Author: </strong></p>
                   <p></p>
                 </div>
                 <!-- <div id="results">
@@ -48,21 +48,22 @@
                 <div class="">
                   <img id="urlImage" src="" alt="Image for URL article">
                 </div>
+              </div>
             </section>
         </main>
 
-        <footer>
+        <footer class="footer">
             <p>This is a footer</p>
         </footer>
-
-        <script>
-         // Check that service workers are supported
-         if ('serviceWorker' in navigator) {
-             // Use the window load event to keep the page load performant
-             window.addEventListener('load', () => {
-                 navigator.serviceWorker.register('/service-worker.js');
-             });
-         }
-        </script>
+      </div>
+      <script>
+       // Check that service workers are supported
+       if ('serviceWorker' in navigator) {
+           // Use the window load event to keep the page load performant
+           window.addEventListener('load', () => {
+               navigator.serviceWorker.register('/service-worker.js');
+           });
+       }
+      </script>
     </body>
 </html>

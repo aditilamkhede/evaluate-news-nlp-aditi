@@ -14,9 +14,24 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
     // Client.checkForName(formText)
 
+    let elemHead = document.querySelector('.secHead');
     if(!Client.validateURL(formText)){
-      alert('Invalid URL');
+      console.log('Invalid URL');
+      let elmResult = document.querySelector('#dvResult');
+      if (elmResult) {
+        elmResult.classList.add('clsHide');
+      }
+      if (elemHead) {
+        elemHead.visible = true;
+        elemHead.classList.add("error");
+        elemHead.innerText = "Invalid URL";
+      }
       return
+    }
+    else {
+      console.log('In else of valid url');
+      elemHead.classList.remove("error");
+      elemHead.innerText = "Form Result";
     }
     console.log("::: Form Submitted :::")
     // fetch('http://localhost:8080/test')
@@ -36,8 +51,8 @@ function handleSubmit(event) {
       // local url --> http://localhost:5000/nlpapi/extract
 
       // postnlpdata(`http://localhost:8081/nlpapi/extract`, urldata)
-      postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
-      // postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
+      // postnlpdata(`https://evaluate-news-nlp-aditi.herokuapp.com/nlpapi/extract`, urldata)
+      postnlpdata(`http://localhost:5000/nlpapi/extract`, urldata)
       .then(function(data){
         console.log('inside then on 5000');
         // let strLabel = data[0]['label']
@@ -70,6 +85,11 @@ function handleSubmit(event) {
 }
 const updateUI = async(result) => {
   try {
+    let elmResult = document.querySelector('#dvResult');
+    if (elmResult) {
+      elmResult.classList.remove('clsHide');
+    }
+
     document.getElementById('urlImage').src = result.image;
     document.querySelector('#title p:nth-child(2)').innerText = result.title;
     document.querySelector('#author p:nth-child(2)').innerHTML = result.author;
