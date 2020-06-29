@@ -1,0 +1,16 @@
+.footer {
+  grid-area: ft;
+  display: flex;
+  flex-direction: row;
+  background-color: white;/*#8A2BE2;/*#455388;*/
+  /*border-radius: 1rem;*/
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  // border: solid 1px #CCCCCC;
+
+  position: fixed;
+  bottom: 0;
+  font-weight: bold;
+}

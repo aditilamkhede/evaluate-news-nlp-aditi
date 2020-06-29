@@ -22,10 +22,6 @@ section {
     }
 }
 
-// section h3 {
-//   font-size: 20px;
-// }
-
 .container {
     display: grid;
     width: 80vw;
@@ -76,18 +72,6 @@ section {
 // .sidebar {
 //   grid-area: sd;
 // }
-.footer {
-  grid-area: ft;
-  display: flex;
-  flex-direction: row;
-  background-color: white;/*#8A2BE2;/*#455388;*/
-  /*border-radius: 1rem;*/
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  border: solid 1px #8A2BE2;
-}
 .clsResult {
   display: flex;
   flex-direction: column;
@@ -98,13 +82,13 @@ section {
     padding: 10px 0 5px 0;
   }
 }
-.clsImage {
-  width: 400px;
-  height: 200px;
-}
-.img {
-  object-fit: contain;
-}
+// .clsImage {
+//   width: 400px;
+//   height: 200px;
+// }
+// .img {
+//   object-fit: contain;
+// }
 .clsHide {
   visibility: hidden;
 }
