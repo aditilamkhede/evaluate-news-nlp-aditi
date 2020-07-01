@@ -24,8 +24,8 @@
         <main class="main">
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter URL here">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="url" type="url" name="input" value="" placeholder="Enter URL here" required>
+                    <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             <section>
 
@@ -40,6 +40,22 @@
                 </div>
                 <div id="author">
                   <p><strong>Author: </strong></p>
+                  <p></p>
+                </div>
+                <div id="polarity">
+                  <p><strong>Polarity: </strong></p>
+                  <p></p>
+                </div>
+                <div id="subjectivity">
+                  <p><strong>Subjectivity: </strong></p>
+                  <p></p>
+                </div>
+                <div id="polr_confidence">
+                  <p><strong>Polarity Confidence: </strong></p>
+                  <p></p>
+                </div>
+                <div id="sub_confidence">
+                  <p><strong>Subjectivity Confidence: </strong></p>
                   <p></p>
                 </div>
                 <!-- <div id="results">

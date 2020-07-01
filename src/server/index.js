@@ -30,8 +30,8 @@ application_key: process.env.API_KEY
 console.log(__dirname)
 
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile('dist/index.html')
+    // res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
 //For Heroku comment this
@@ -149,6 +149,29 @@ app.post('/nlpapi/extract', function (req, res) {
         console.log('Post Extract Error', error);
       }
     });
+})
+
+app.post('/nlpapi/sentiment', function (req, res) {
+    console.log('Post Sentiment', req.body);
+    // res.send(mockAPIResponse)
+
+    // reference from below api documentation
+    // https://docs.aylien.com/textapi/endpoints/?javascript#sentiment-analysis
+
+    nplapi.sentiment({
+      text: req.body.title,
+      mode: 'tweet'
+    }, function(error, response) {
+      if (error === null) {
+        console.log(response);
+        projectData['polarity'] = response['polarity'];
+        projectData['subjectivity'] = response['subjectivity'];
+        projectData['polarity_confidence'] = response['polarity_confidence'];
+        projectData['subjectivity_confidence'] = response['subjectivity_confidence'];
+        res.send(projectData);
+      }
+    });
+    // res.send(projectData);
 })
 
 module.exports = { app };

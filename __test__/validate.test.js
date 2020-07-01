@@ -1,7 +1,8 @@
 import "babel-polyfill";
 // const fetch = require("node-fetch");
 
-const { checkForName, validateURL } = require('../src/client/js/validate');
+// const { checkForName, validateURL } = require('../src/client/js/validate');
+const { validateURL } = require('../src/client/js/validate');
 
 const nlpapi = require('../src/client/js/formHandler');
 // import * as nlpapi from '../src/client/js/formHandler';

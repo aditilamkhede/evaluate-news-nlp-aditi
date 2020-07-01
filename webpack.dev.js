@@ -8,10 +8,15 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'development',
     devtool: 'source-map',
-    stats: 'verbose',
+    stats: 'normal',
     output: {
       libraryTarget: 'var',
       library: 'Client'
+    },
+    devServer: {
+      proxy: {
+        '/nlpapi': 'http://localhost:5000'
+      }
     },
     module: {
         rules: [
