@@ -59,7 +59,7 @@ function handleSubmit(event) {
         console.log('post response Data - ', data);
         // console.log(data);
         // updateUI(data);
-        postSentimentAnalysis('http://localhost:5000/nlpapi/sentiment', {'title': data.title})
+        postSentimentAnalysis('/nlpapi/sentiment', {'title': data.title})
         .then(function(sentData) {
           updateUI(sentData);
         });
